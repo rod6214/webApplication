@@ -1,0 +1,14 @@
+<div *ngIf="!hasError">
+    <h1 class="animated fadeIn fast">ASP.NET Core and Docker container</h1>
+    <br>
+    <div *ngFor="let app of data">
+        <app-card [img]="app.img" [title]="app.title" [imageName]="app.imageName" [link]="app.link" [text]="app.text" [mutedText]="app.mutedText">
+        </app-card>
+    </div>
+</div>
+
+<div *ngIf="hasError">
+    <div class="alert alert-danger" role="alert">
+        {{error}}
+    </div>
+</div>
