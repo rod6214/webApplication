@@ -14,3 +14,6 @@ Necessary dependencies so that you can use **dotnet-aspnet-codegenerator** tool.
 * dotnet-aspnet-codegenerator view Index -namespace webapplication.Controllers -outDir Views/HelloWorld -udl Empty
 ### To generate controller.
 * dotnet-aspnet-codegenerator -p "C:\Desarrollo\aspexample\webapplication\webapplication.csproj" controller -name HelloWorldController -outDir Controllers -namespace webapplication.Controllers.
+
+### Build angular
+* ng build --prod --output-hashing none
