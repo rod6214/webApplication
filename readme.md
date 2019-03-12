@@ -54,3 +54,14 @@ WORKDIR /app
 COPY --from=build-env /app/out .
 ENTRYPOINT ["dotnet", "demo.dll"]
 ```
+### Build Docker image
+* docker build -t demo .
+
+### Run Docker image
+* docker run -d -p [http port]:[https port] [IMAGE_ID]
+
+### List images
+* docker image ls
+
+### List containers
+* docker container ls
