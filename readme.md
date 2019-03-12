@@ -37,7 +37,7 @@ Enter into demo directory and invoke the following:
 
 ### Creating Dockerfile
 Enter into demo directory and create dockerfile with the following content:
-`FROM microsoft/dotnet:sdk AS build-env
+```FROM microsoft/dotnet:sdk AS build-env
 WORKDIR /app
 
 # Copy csproj and restore as distinct layers
@@ -52,4 +52,4 @@ RUN dotnet publish -c Release -o out
 FROM microsoft/dotnet:aspnetcore-runtime
 WORKDIR /app
 COPY --from=build-env /app/out .
-ENTRYPOINT ["dotnet", "demo.dll"]`
+ENTRYPOINT ["dotnet", "demo.dll"]```
